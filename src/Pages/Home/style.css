@@ -1,0 +1,36 @@
+@import '../../root.css';
+
+.page-home{
+    margin-left: 20vw;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    background-color: #222222;
+}
+.box-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.input-home{
+    height: 5vh;
+    width: 40vw;
+    font-size: 20px;
+    padding: 1vh 2px 1vh;
+    font-family: 'Barlow', sans-serif;
+    border-radius: 5px;
+    outline: none;
+}
+.button-input-pesquisa{
+    background-color: #804DEC;
+    height: 7vh;
+    border-radius: 5px;
+    padding: 2vh 2vh;
+    cursor: pointer;
+}

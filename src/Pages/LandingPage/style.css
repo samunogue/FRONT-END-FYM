@@ -1,0 +1,139 @@
+@import '../../root.css';
+
+.page-landing{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #222222;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70%;
+    padding-bottom: 20px;
+}
+.button-header{
+    border-radius: 5px;
+    padding: 5px;
+    width: 8%;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    background-color: #804DEC;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.banner{
+    width: 100%;
+    height: 50vh;
+    padding-bottom: 30px;
+    background-color: #804DEC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box-texto-banner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+.texto-banner{
+    width: 100%;
+    color: white;
+    font-size: 24px;
+}
+.button-banner{
+    width:10vw;
+    background-color: white;
+    padding:2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2px;
+    gap: 10px;
+    cursor: pointer;
+}
+.texto-button{
+    color: black;
+    margin-left: 1vw;
+    font-weight: bold;
+    font-family: 'Barlow', sans-serif;
+}
+.box-seta-button{
+    border-radius: 2px;
+    padding: 5px;
+    background-color: #804DEC;
+}
+.section-home{
+    width: 100%;
+    height: 60vh;
+    padding-top: 10px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box-texto{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+.titulo-section{
+    font-weight: bold;
+    font-family: 'Barlow', sans-serif;
+    color: white;  
+    font-size: 37px; 
+}
+.linha{
+    width: 40%;
+    height: 2px;
+    background-color: #804DEC;
+}
+.texto-section{
+    font-family: 'Barlow', sans-serif;
+    color: white; 
+}
+.botao-section{
+    background-color: transparent;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    padding: 10px;
+}
+.section-cards{
+    width: 100%;
+    min-height: 80vh;
+    padding-top: 10px;
+    padding: 10vh;
+    background-color: #804DEC;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    
+}
+.card{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5vh;
+}
