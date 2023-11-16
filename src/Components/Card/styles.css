@@ -1,0 +1,70 @@
+.cards-container {
+    display: flex;
+    gap: 2rem;
+    margin: 4rem 10vw;
+    flex-wrap: wrap;
+}
+
+.information-card {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30.3125rem;
+    padding: 0.75rem;
+}
+
+.information-title {
+    font-size: 2rem;
+    font-weight: 400;
+
+    margin-bottom: 1rem;
+}
+
+.information-description {
+    font-size: 1rem;
+    color: #848484;
+
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+
+    margin-bottom: 1rem;
+}
+
+.musical-genre {
+    padding: 0.5rem 1rem;
+    background-color: #B5B0EC;
+    border-radius: 10px;
+
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.musical-genres-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.rating-score {
+    font-size: 1.5rem;
+}
+
+.rating-and-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-and-button-container button {
+    cursor: pointer;
+    background: #804DEC;
+
+    font-size: 1.5rem;
+    color: #fff;
+
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+}

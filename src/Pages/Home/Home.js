@@ -8,6 +8,7 @@ import { ContratosSection } from "../Contratos"
 import { FavoritosSection } from "../Favoritos"
 import { Load } from '../../Components/Load/load.js'
 import './style.css'
+import { Card } from "../../Components/Card/index.js"
 
 export const Home = () =>{
     const [view,setView] = useState('Home')
@@ -42,6 +43,7 @@ export const Home = () =>{
                             </button>
                         </div>
                         }
+                        <Card />
             </main> 
         )}
         </>
