@@ -4,6 +4,7 @@ import { CadastroPage } from './Pages/Cadastro';
 import { Home } from './Pages/Home/Home';
 import { LandingPage } from './Pages/LandingPage';
 import { LoginPage } from './Pages/Login';
+import { Card } from './Components/Card';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/cadastro" element={<CadastroPage />} />
       </Routes>
     </BrowserRouter>
+    
   );
 };
 

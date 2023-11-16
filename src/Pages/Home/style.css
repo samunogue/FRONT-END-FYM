@@ -38,6 +38,7 @@
     margin-top: 15vh;
 }
 .section-cards-home{
+    padding-top: 2vh;
     width: 100%;
     height: 100%;
     background-color: #222222;
@@ -47,6 +48,12 @@
     justify-content: flex-start;
     gap: 5vh;
 }
+.titulo-section-home{
+    color: white;
+    font-weight: 300;
+    margin-right: auto;
+    margin-left: 8vw;
+}
 .box-cards-home{
     width: 100%;
     background-color: #222222;
@@ -54,6 +61,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
-    overflow: scroll;
+    gap: 2vw;
+    overflow: hidden;
 }

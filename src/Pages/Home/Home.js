@@ -10,6 +10,7 @@ import { Load } from '../../Components/Load/load.js'
 import './style.css'
 import { Get } from "../../Config/requisitions"
 import { endpoints } from "../../Config/config"
+import { Card } from "../../Components/Card/index.js"
 
 export const Home = () =>{
     const [view,setView] = useState('Home')
@@ -75,21 +76,11 @@ export const Home = () =>{
                             <section className="section-cards-home">
                                 <h1 className="titulo-section-home">Melhores Avaliações</h1>
                                 <div className="box-cards-home">
-                                {musicos.map(item =>
-                                    <div key={item._id}>
-                                        <h1>{item.nomeCompleto}</h1>
-                                        <h2>{item.descricao}</h2>
-                                        {item.generos.map(genero =>
-                                            <div key={genero}>{genero}</div>
-                                        )}
-                                        <p>NOTA</p>
-                                        <button>
-                                            Contratar
-                                        </button>
-                                    </div>    
+                                    {musicos.map(item =>
+                                    <Card artist={item} />
                                     )}
-                                </div>
-                            </section>
+                                </div> 
+                            </section> 
                         )}
             </main> 
         )}
