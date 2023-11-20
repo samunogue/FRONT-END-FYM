@@ -1,5 +1,6 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom";
 import './style.css';
 const logo = require('../../Assets/LOGO_FYM_FUNDO_ESCURO.png')
 const iconeBanner = require('../../Assets/icone-banner.png')
@@ -11,9 +12,9 @@ export const LandingPage = () =>{
         <main className="page-landing">
             <nav className="header">
                 <img src={logo} height='100' />
-                <button className="button-header">
+                <Link to="/menu" className="button-header">
                     Login
-                </button>
+                </Link>
             </nav>
             <section className="banner">
                 <div className="box-texto-banner">

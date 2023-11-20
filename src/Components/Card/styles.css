@@ -1,10 +1,3 @@
-.cards-container {
-    display: flex;
-    gap: 2rem;
-    margin: 4rem 10vw;
-    flex-wrap: wrap;
-}
-
 .information-card {
     background-color: #fff;
     border-radius: 10px;
@@ -13,10 +6,8 @@
 }
 
 .information-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
-
-    margin-bottom: 1rem;
 }
 
 .information-description {
@@ -38,7 +29,7 @@
     border-radius: 10px;
 
     color: #fff;
-    font-size: 0.8rem
+    font-size: 0.7rem
 }
 
 .musical-genres-container {
@@ -49,7 +40,7 @@
 }
 
 .rating-score {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .rating-and-button-container {
@@ -62,7 +53,7 @@
     cursor: pointer;
     background: #804DEC;
 
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fff;
 
     padding: 1vh 1vw;

@@ -7,12 +7,12 @@ export const MenuLateral = ({user,setMenu}) =>{
     }
     return(
         <section className="box-menu-lateral">
-            {/* 
-            <p>{user.nome}</p>
+            <p className="nome-menu-lateral">Olá, {user.nomeCompleto}</p>
+            <div className="section-generos-menu-lateral">
             {user.generos.map(item =>
-                <p>{item}</p>
+                    <p className="box-genero-menu-lateral">{item}</p>
             )}
-            */}
+            </div>
             <button className="button-menu-lateral" onClick={()=> definirMenu('Home')}>
                 <p>Home</p>
                 <FontAwesomeIcon icon={faHouse} />

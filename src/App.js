@@ -5,6 +5,7 @@ import { Home } from './Pages/Home/Home';
 import { LandingPage } from './Pages/LandingPage';
 import { LoginPage } from './Pages/Login';
 import { Card } from './Components/Card';
+import { MenuLogin } from './Pages/PreMenu';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/cadastro" element={<CadastroPage />} />
+        <Route path="/menu" element={<MenuLogin />} />
       </Routes>
     </BrowserRouter>
     

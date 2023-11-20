@@ -22,7 +22,7 @@ export function Card({artist}) {
                 <div className='rating-score'>
                     <span>NOTA</span>
                     <span>/5&nbsp;</span>
-                    <span>&nbsp;⭐</span>
+                    <span>⭐</span>
                 </div>
 
                 <button>Contratar</button>

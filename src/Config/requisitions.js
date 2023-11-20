@@ -17,42 +17,43 @@ export async function Get(url,params){
     .catch(error => console.log(error))
   }
 /*
-export async function Post(url,body){
-  const token = await getToken()
-  return await axios({
-    method: "POST",
-    body: JSON.stringify(body), 
-    headers:{
-      "Content-Type":"application/json",
-      Authorization: token
-    },
-    url: url,
-  })
-  .then(response => {
-    return response
-  })
-  .catch(error => console.log(error.response))
-}
-*/
+  export async function Post(url, body) {
+    try {
+      const response = await axios({
+        method: 'POST',
+        data: body, // Não é necessário JSON.stringify aqui
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        url: url,
+      });
+  
+      return response.data;
+    } catch (error) {
+      console.log(error)
+      return {
+        codigo: error.response.status,
+        mensagem: error.response.data.message,
+      };
+    }
+  }
 
+*/
 export async function Post(url, body) {
   try {
-    const response = await fetch(url, {
-      method: 'POST',
+    const response = await axios.post(url, body, {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body),
     });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const responseData = await response.json();
-    return responseData;
+    console.log(response)
+    return response.data;
   } catch (error) {
-    console.error(error);
+    console.log(error)
+    return {
+      codigo: error.response ? error.response.status : null,
+      mensagem: error.response ? error.response.data.message : 'Erro na requisição',
+    };
   }
 }
 

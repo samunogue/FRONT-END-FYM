@@ -23,6 +23,10 @@
     padding: 5px;
     width: 8%;
     font-family: 'Barlow', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     background-color: #804DEC;
     color: white;

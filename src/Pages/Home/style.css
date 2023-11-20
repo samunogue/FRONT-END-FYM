@@ -64,3 +64,32 @@
     gap: 2vw;
     overflow: hidden;
 }
+.box-generos-home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5vw;
+    padding-top: 3vh;
+}
+.button-genero-home{
+    padding: 1vh;
+    background-color: transparent;
+    border-color: #804DEC;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}
+.button-genero-home-selecionado{
+    padding: 1vh;
+    background-color: #804DEC;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}

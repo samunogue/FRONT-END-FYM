@@ -1,7 +1,7 @@
 @import '../../root.css';
 
 .box-menu-lateral{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     background-color: #804DEC;
@@ -25,4 +25,26 @@
     justify-content: space-around;
     border-radius: 10px;
     cursor: pointer;
+}
+.section-generos-menu-lateral{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+.box-genero-menu-lateral{
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 1vh;
+    font-size: 0.8rem;
+    font-family: 'Barlow', sans-serif; 
+}
+.nome-menu-lateral{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Barlow', sans-serif; 
 }
