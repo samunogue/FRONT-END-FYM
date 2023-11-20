@@ -93,3 +93,12 @@
     font-family: 'Barlow', sans-serif;
     cursor: pointer;
 }
+.box-alerta-home{
+    position: relative;
+    top: 30vh;
+}
+.alerta-home{
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+}

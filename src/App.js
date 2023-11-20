@@ -6,6 +6,7 @@ import { LandingPage } from './Pages/LandingPage';
 import { LoginPage } from './Pages/Login';
 import { Card } from './Components/Card';
 import { MenuLogin } from './Pages/PreMenu';
+import { RedefinirSenhaPage } from './Pages/RedefinirSenha';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/cadastro" element={<CadastroPage />} />
         <Route path="/menu" element={<MenuLogin />} />
+        <Route path="/redefinirSenha" element={<RedefinirSenhaPage />} />
       </Routes>
     </BrowserRouter>
     

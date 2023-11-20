@@ -9,5 +9,7 @@ export const endpoints = {
     excluirContratante:`${URL_BASE}/contratante`,
     cadastrarMusico:`${URL_BASE}/musico`,
     editarMusico:`${URL_BASE}/musico`,
-    excluirMusico:`${URL_BASE}/musico`
+    excluirMusico:`${URL_BASE}/musico`,
+    redefinirSenhaMusico:`${URL_BASE}/conta/redefinirSenhaMusico`,
+    redefinirSenhaContratante:`${URL_BASE}/conta/redefinirSenhaContratante`
 }

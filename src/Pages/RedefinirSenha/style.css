@@ -1,6 +1,6 @@
 @import '../../root.css';
 
-.page-login{
+.page-redefinir-senha{
     width: 100vw;
     height: 100vh;
     background-color: #222222;
@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
 }
-.box-login{
+.box-forms-redefinir{
     width: 30%;
     min-height: 40vh;
     display: flex;
@@ -21,7 +21,7 @@
     border-radius: 10px ;
     padding: 5vh;
 }
-.input{
+.input-redefinir{
     outline: none;
     border-bottom-style: solid;
     border-color: #804DEC;
@@ -32,19 +32,7 @@
     width: 80%;
     margin: 10px;
 }
-.link-esqueci-senha{
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    color: #804DEC;
-    font-size: 12px;
-    cursor: pointer;
-}
-.linha-box-login{
-    width: 40%;
-    height: 2px;
-    background-color: #ababab;
-}
-.botao-login{
+.botao-forms-redefinir{
     padding: 5px;
     width: 30%;
     background-color: #804DEC;
@@ -56,10 +44,6 @@
     margin: 2vh;
     cursor: pointer;
 }
-.texto-login{
-    font-family: 'Barlow', sans-serif;
-    font-size: 16px;
-}
-.alerta-login{
+.alerta-redefinir{
     color: red;
 }

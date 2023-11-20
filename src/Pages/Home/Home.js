@@ -11,9 +11,10 @@ import './style.css'
 import { Get } from "../../Config/requisitions"
 import { endpoints } from "../../Config/config"
 import { Card } from "../../Components/Card/index.js"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 export const Home = () =>{
+    const navigate = useNavigate()
     const [view,setView] = useState('Home')
     const [load, setLoad] = useState(false)
     const [alerta, setAlerta] = useState(null)
@@ -45,10 +46,12 @@ export const Home = () =>{
     },[pesquisa])
     const buscarMusicos = async () =>{
             if(pesquisa == '' || pesquisa == null){
+                setAlerta(null)
                 setLoad(true)
                 const musicos = await Get(endpoints.listarMusicos)
                 if(musicos == undefined || musicos == false){
-                    setAlerta(true);
+                    setLoad(false)
+                    setAlerta("Não foram encontrados músicos");
                     return
                 }
                 setMusicos(musicos)
@@ -58,6 +61,7 @@ export const Home = () =>{
     const buscarMusicoPesquisa = async (tipo,input) =>{
         if(input == '' || input == null) return
         setLoad(true)
+        setAlerta(null)
         var params = {}
         if(tipo == 'genero'){
             if(generoSelecionado == input){
@@ -75,16 +79,20 @@ export const Home = () =>{
         }
         const musicos = await Get(endpoints.listarMusicos, params)
         if(musicos == undefined || musicos == false){
-            setAlerta(true);
+            setLoad(false)
+            setAlerta("Não foram encontrados músicos");
             return
         }
         setMusicos(musicos)
         setLoad(false)
     }
 
+    const logout = () =>{
+        navigate(`/`) 
+    }
     return(
         <>
-        <MenuLateral setMenu={setView} user={state.user} />
+        <MenuLateral setMenu={setView} user={state.user} logout={logout} />
         {renderMenu(view)}
         {view == 'Home' &&(
             <main className="page-home">
@@ -105,13 +113,13 @@ export const Home = () =>{
                             </div>
                         )}
                         {alerta != null &&(
-                            <div className="box-load">
-                                <Load tema={'escuro'}/>
+                            <div className="box-alerta-home">
+                                <p className="alerta-home">{alerta}</p>
                             </div>
                         )}
                         {alerta == null && load == false && musicos != null &&(
                             <section className="section-cards-home">
-                                <h1 className="titulo-section-home">Melhores Avaliações</h1>
+                                <h1 className="titulo-section-home">Músicos</h1>
                                 <div className="box-cards-home">
                                     {musicos.map(item =>
                                     <Card artist={item} />

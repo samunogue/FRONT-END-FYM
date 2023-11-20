@@ -41,7 +41,7 @@ export const LoginPage = () =>{
             <div className="box-login">
                 <input type={'text'} className="input" placeholder="Email" onChange={(event) => setEmail(event.target.value)}/>
                 <input type={'password'} className="input" placeholder="Senha"  onChange={(event) => setSenha(event.target.value)}/>
-                <a className="link">esqueci minha senha</a>
+                <a className="link-esqueci-senha" onClick={() => navigate(`/redefinirSenha`,{ state: { tipo:state.tipo } }) }>esqueci minha senha</a>
                 <button className="botao-login" onClick={login}>
                     {load == true 
                     ?

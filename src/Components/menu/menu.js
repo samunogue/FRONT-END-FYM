@@ -1,7 +1,7 @@
-import { faComments, faFileInvoice, faGears, faHouse, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faComments, faFileInvoice, faGears, faHouse, faRightFromBracket, faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './style.css'
-export const MenuLateral = ({user,setMenu}) =>{
+export const MenuLateral = ({user,setMenu,logout}) =>{
     const definirMenu = (menu) =>{
         setMenu(menu)
     }
@@ -32,6 +32,10 @@ export const MenuLateral = ({user,setMenu}) =>{
             <button className="button-menu-lateral" onClick={()=> definirMenu('Configuracoes')}>
                 <p>Configurações</p>
                 <FontAwesomeIcon icon={faGears} />
+            </button>
+            <button className="button-menu-lateral" onClick={logout}>
+                <p>Sair</p>
+                <FontAwesomeIcon icon={faRightFromBracket} />
             </button>
         </section>
     )
