@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
 }
-.box-login{
+.box-cadastro{
     width: 32vw;
     min-height: 40vh;
     display: flex;
@@ -22,7 +22,7 @@
     border-radius: 10px ;
     padding: 2vh;
 }
-.input{
+.input-cadastro{
     outline: none;
     border-bottom-style: solid;
     border-color: #804DEC;
@@ -30,7 +30,7 @@
     font-size: 16px;
     font-family: 'Barlow', sans-serif;
     padding: 2px;
-    width: 13vw;
+    width: 40%;
 }
 .link{
     font-family: 'Barlow', sans-serif;
@@ -58,4 +58,18 @@
 .texto-login{
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
+}
+.titulo-secttion-forms-cadastro{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: 3vw;
+}
+.forms-cadastro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 100%;
 }
