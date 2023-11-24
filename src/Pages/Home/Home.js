@@ -21,29 +21,46 @@ export const Home = () =>{
     const [musicos, setMusicos] = useState(null)
     const [pesquisa, setPesquisa] = useState(null)
     const [generoSelecionado, setGeneroSelecionado] = useState(null)
-
     const {state} = useLocation()
-    const renderMenu = (pagina) =>{
-        switch (pagina) {
-            case 'Chat':
-                return <ChatSection user={state.user} />
-            case 'Contratos':
-                return <ContratosSection user={state.user} />
-            case 'Favoritos':
-                return <FavoritosSection user={state.user} />
-            case 'Configuracoes':
-                return <ConfiguracoesSection user={state.user} />
-            default:
-                break;
-        }
-    }
+    const [user, setUser] = useState(state.user)
 
+    useEffect(()=>{
+        const buscar = async () =>{
+            await buscarUser(state.user)
+        }
+        buscar()
+    },[])
     useEffect(()=>{
         const buscar = async () =>{
             await buscarMusicos()
         }
         buscar()
     },[pesquisa])
+    
+    const buscarUser = async (user) =>{
+        setAlerta(null)
+        setLoad(true)
+        var tipo = null
+        const params = {}
+        if(user.hasOwnProperty('descricao')){
+            params.id = user._id
+            tipo = 'musico'
+        }else{
+            params.id = user._id
+            tipo = 'contratante'
+        }
+        var url = tipo == 'musico' ? endpoints.listarMusicos : endpoints.buscarContratante
+        const userJson = await Get(url, params)
+        console.log(userJson)
+        if(userJson == undefined || userJson == false){
+            setLoad(false)
+            setAlerta("Usuário não encontrado");
+            return
+        }
+        setUser(userJson)
+        setLoad(false)
+    }
+
     const buscarMusicos = async () =>{
             if(pesquisa == '' || pesquisa == null){
                 setAlerta(null)
@@ -93,7 +110,6 @@ export const Home = () =>{
     return(
         <>
         <MenuLateral setMenu={setView} user={state.user} logout={logout} />
-        {renderMenu(view)}
         {view == 'Home' &&(
             <main className="page-home">
                         <div className="box-input">

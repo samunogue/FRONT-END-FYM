@@ -1,0 +1,120 @@
+@import '../../root.css';
+
+.section-modal-cadastro-contrato{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.box-modal-cadastro-contrato{
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+}
+.box-header-modal-cadastro-contrato{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5vw;
+}
+.input-cadastro-contrato{
+    outline: none;
+    border-bottom-style: solid;
+    border-color: #804DEC;
+    border-bottom-width: 1px;
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+    padding: 2px;
+    width: 100%;
+    margin: 10px;
+}
+.textarea-cadastro-contrato{
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    padding: 2px;
+    width: 100%;
+    outline: none;
+    border-style: solid;
+    border-color: #804DEC;
+    border-width: 1px;
+    border-radius: 5px;
+    min-height: 15vh;
+}
+.button-cadastrar-contrato{
+    width: 100%;
+    margin-top: 2vh;
+    padding: 5px;
+    background-color: #804DEC;
+    color: white;
+    border-radius: 5px;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button-fechar-cadastro-contrato{
+    background-color: #804DEC;
+    border-radius: 50%;
+    padding: 1vh 1.5vh;
+    color: white;
+    cursor: pointer;
+}
+.box-musicos-forms-contratos{
+    margin: 2vh 0vw 2vh 0vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 15vh;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* Para navegadores baseados em Gecko (Firefox) */
+    scrollbar-color: #888 #f1f1f1; /* Cor da alça e do trilho para navegadores baseados em Gecko */
+
+    &::-webkit-scrollbar {
+        width: .8vw; /* Largura da barra de rolagem */
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Cor do trilho */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #804DEC; /* Cor da alça */
+        border-radius: 10px; /* Borda arredondada da alça */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Mudando a cor da alça quando o mouse está sobre ela */
+    }
+}
+.musico-rolagem-forms-cadastro{
+    width: 90%;
+    background-color: #7f4dec2c;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+}
+.alerta-sucesso-forms-contratos{
+    padding-top: 3vh;
+    font-family: 'Barlow', sans-serif;
+    color: rgb(85, 206, 85);
+}
+.alerta-erro-forms-contratos{
+    padding-top: 3vh;
+    font-family: 'Barlow', sans-serif;
+    color: rgb(206, 85, 91);
+}

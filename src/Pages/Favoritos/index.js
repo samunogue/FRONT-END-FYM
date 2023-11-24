@@ -1,11 +1,44 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom"
 import { MenuLateral } from '../../Components/menu/menu';
 import './style.css';
+import { endpoints } from '../../Config/config';
+import { Get } from '../../Config/requisitions';
 
 export const FavoritosSection = () =>{
+    const [load, setLoad] = useState(false)
+    const [alerta, setAlerta] = useState(null)
     const {state} = useLocation()
     const [user, setUser] = useState(state.user)
+    useEffect(()=>{
+        const buscar = async () =>{
+            await buscarUser(state.user)
+        }
+        buscar()
+    },[])
+    const buscarUser = async (user) =>{
+        setAlerta(null)
+        setLoad(true)
+        var tipo = null
+        const params = {}
+        if(user.hasOwnProperty('descricao')){
+            params.id = user._id
+            tipo = 'musico'
+        }else{
+            params.id = user._id
+            tipo = 'contratante'
+        }
+        var url = tipo == 'musico' ? endpoints.listarMusicos : endpoints.buscarContratante
+        const userJson = await Get(url, params)
+        console.log(userJson)
+        if(userJson == undefined || userJson == false){
+            setLoad(false)
+            setAlerta("Usuário não encontrado");
+            return
+        }
+        setUser(userJson)
+        setLoad(false)
+    }
 
     return(
         <>

@@ -15,7 +15,7 @@ export const MenuLateral = ({user}) =>{
             <p className="nome-menu-lateral">Olá, {user.nomeCompleto.slice(0,user.nomeCompleto.indexOf(" "))}</p>
             <div className="section-generos-menu-lateral">
             {user.generos.map(item =>
-                    <p className="box-genero-menu-lateral">{item}</p>
+                    <p className="box-genero-menu-lateral" key={item}>{item}</p>
             )}
             </div>
             <button className="button-menu-lateral" onClick={()=> definirMenu('home')}>

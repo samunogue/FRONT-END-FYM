@@ -1,6 +1,7 @@
 const URL_BASE = 'http://localhost:3030/v1'
 
 export const endpoints = {
+    buscarContratante:`${URL_BASE}/contratante`,
     listarMusicos:`${URL_BASE}/musico`,
     loginContratante:`${URL_BASE}/conta/loginContratante`,
     loginMusico:`${URL_BASE}/conta/loginMusico`,
@@ -11,5 +12,6 @@ export const endpoints = {
     editarMusico:`${URL_BASE}/musico`,
     excluirMusico:`${URL_BASE}/musico`,
     redefinirSenhaMusico:`${URL_BASE}/conta/redefinirSenhaMusico`,
-    redefinirSenhaContratante:`${URL_BASE}/conta/redefinirSenhaContratante`
+    redefinirSenhaContratante:`${URL_BASE}/conta/redefinirSenhaContratante`,
+    cadastrarContrato:`${URL_BASE}/contratante/cadastrarContrato`
 }

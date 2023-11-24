@@ -3,7 +3,8 @@
 .page-contratos{
     margin-left: 20vw;
     width: 80vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,4 +56,15 @@
     padding: 1vh;
     border-radius: 5px;
     font-size: .8rem;
+}
+.button-criar-contrato-contratos{
+    position: absolute;
+    left: 80vw;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    background-color: #804DEC;
+    padding: 2vh;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
 }
