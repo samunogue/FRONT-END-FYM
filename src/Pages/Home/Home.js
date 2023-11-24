@@ -26,13 +26,13 @@ export const Home = () =>{
     const renderMenu = (pagina) =>{
         switch (pagina) {
             case 'Chat':
-                return <ChatSection />
+                return <ChatSection user={state.user} />
             case 'Contratos':
-                return <ContratosSection />
+                return <ContratosSection user={state.user} />
             case 'Favoritos':
                 return <FavoritosSection user={state.user} />
             case 'Configuracoes':
-                return <ConfiguracoesSection />
+                return <ConfiguracoesSection user={state.user} />
             default:
                 break;
         }

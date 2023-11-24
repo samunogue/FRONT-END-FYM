@@ -1,35 +1,40 @@
 import { faComments, faFileInvoice, faGears, faHouse, faRightFromBracket, faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useLocation, useNavigate } from "react-router-dom"
 import './style.css'
-export const MenuLateral = ({user,setMenu,logout}) =>{
+export const MenuLateral = ({user}) =>{
+    const navigate = useNavigate()
     const definirMenu = (menu) =>{
-        setMenu(menu)
+        navigate(`/${menu}`,{ state: { user: user } })
+    }
+    const logout = () =>{
+        navigate('/')
     }
     return(
         <section className="box-menu-lateral">
-            <p className="nome-menu-lateral">Olá, {user.nomeCompleto}</p>
+            <p className="nome-menu-lateral">Olá, {user.nomeCompleto.slice(0,user.nomeCompleto.indexOf(" "))}</p>
             <div className="section-generos-menu-lateral">
             {user.generos.map(item =>
                     <p className="box-genero-menu-lateral">{item}</p>
             )}
             </div>
-            <button className="button-menu-lateral" onClick={()=> definirMenu('Home')}>
+            <button className="button-menu-lateral" onClick={()=> definirMenu('home')}>
                 <p>Home</p>
                 <FontAwesomeIcon icon={faHouse} />
             </button>
-            <button className="button-menu-lateral" onClick={()=> definirMenu('Chat')}>
+            <button className="button-menu-lateral" onClick={()=> definirMenu('chat')}>
                 <p>Chat</p>
                 <FontAwesomeIcon icon={faComments} />
             </button>
-            <button className="button-menu-lateral" onClick={()=> definirMenu('Favoritos')}>
+            <button className="button-menu-lateral" onClick={()=> definirMenu('favoritos')}>
                 <p>Favoritos</p>
                 <FontAwesomeIcon icon={faStar} />
             </button>
-            <button className="button-menu-lateral" onClick={()=> definirMenu('Contratos')}>
+            <button className="button-menu-lateral" onClick={()=> definirMenu('contratos')}>
                 <p>Contratos</p>
                 <FontAwesomeIcon icon={faFileInvoice} />
             </button>
-            <button className="button-menu-lateral" onClick={()=> definirMenu('Configuracoes')}>
+            <button className="button-menu-lateral" onClick={()=> definirMenu('configuracoes')}>
                 <p>Configurações</p>
                 <FontAwesomeIcon icon={faGears} />
             </button>

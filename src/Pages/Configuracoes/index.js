@@ -5,10 +5,14 @@ import { PerfilSectionConfig } from './components/perfil';
 import { SegurancaSectionConfig } from './components/seguranca';
 import { NotificacoesSectionConfig } from './components/notificacoes';
 import { PagamentosSectionConfig } from './components/pagamentos';
+import { useLocation, useNavigate } from "react-router-dom"
+import { MenuLateral } from '../../Components/menu/menu';
 import './style.css';
 
 export const ConfiguracoesSection = () =>{
     const [view, setView] = useState('Perfil')
+    const {state} = useLocation()
+    const [user, setUser] = useState(state.user)
     const renderMenu = (params) =>{
         switch (params) {
             case 'Perfil':
@@ -27,6 +31,8 @@ export const ConfiguracoesSection = () =>{
         setView(menu)
     }
     return(
+        <>
+        <MenuLateral user={user} />
         <main className="page-configuracoes">
             <div className='box-menu-configuracoes'>
                 <h1 className='titulo-section-configuracoes'>Configurações</h1>
@@ -49,5 +55,6 @@ export const ConfiguracoesSection = () =>{
             </div>
             {renderMenu(view)}
         </main> 
+    </>
     )
 }

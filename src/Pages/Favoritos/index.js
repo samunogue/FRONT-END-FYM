@@ -1,10 +1,18 @@
+import { useState } from 'react';
+import { useLocation, useNavigate } from "react-router-dom"
+import { MenuLateral } from '../../Components/menu/menu';
 import './style.css';
-export const FavoritosSection = ({user}) =>{
-    const favoritos = user.favoritos
+
+export const FavoritosSection = () =>{
+    const {state} = useLocation()
+    const [user, setUser] = useState(state.user)
+
     return(
+        <>
+        <MenuLateral user={user} />
         <main className="page-favoritos">
                 <h1 className="titulo-page-favoritos">Meus Favoritos</h1>
-                {favoritos.map(item =>
+                {user.favoritos.map(item =>
                 <div className='card-musico-favoritos'>
                     <div className='box-titulo-card-favoritos'>
                         <h1 className='nome-card-favoritos'>{item.nomeCompleto}</h1>
@@ -24,5 +32,6 @@ export const FavoritosSection = ({user}) =>{
                 </div>    
                 )}
         </main> 
+        </>
     )
 }
