@@ -1,17 +1,25 @@
-import { faComments, faFileInvoice, faGears, faHouse, faRightFromBracket, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faComments, faFileInvoice, faGears, faHouse, faL, faRightFromBracket, faStar, faX } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useLocation, useNavigate } from "react-router-dom"
 import './style.css'
+import { useState } from "react"
 export const MenuLateral = ({user}) =>{
     const navigate = useNavigate()
+    const [menuVisible, setMenuVisible] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuVisible(!menuVisible);
+    };
     const definirMenu = (menu) =>{
+        setMenuVisible(false)
         navigate(`/${menu}`,{ state: { user: user } })
     }
     const logout = () =>{
         navigate('/')
     }
     return(
-        <section className="box-menu-lateral">
+        <>
+        <section className={`box-menu-lateral ${menuVisible ? "visible" : ""}`}>
             <p className="nome-menu-lateral">Olá, {user.nomeCompleto.slice(0,user.nomeCompleto.indexOf(" "))}</p>
             <div className="section-generos-menu-lateral">
             {user.generos.map(item =>
@@ -43,5 +51,20 @@ export const MenuLateral = ({user}) =>{
                 <FontAwesomeIcon icon={faRightFromBracket} />
             </button>
         </section>
+                <button className={`button-acesso-menu-lateral ${menuVisible ? "button-acesso-menu-lateral-fechar" : ""}`} onClick={toggleMenu}>
+                    {menuVisible == true 
+                    ?
+                    <>
+                    <p>Fechar</p>
+                    <FontAwesomeIcon icon={faX} />
+                    </>
+                    :
+                    <>
+                    <p>Menu</p>
+                    <FontAwesomeIcon icon={faBars} />
+                    </>
+                    }
+                </button>
+        </>
     )
 }

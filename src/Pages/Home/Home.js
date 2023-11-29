@@ -12,6 +12,8 @@ import { Get } from "../../Config/requisitions"
 import { endpoints } from "../../Config/config"
 import { Card } from "../../Components/Card/index.js"
 import { useLocation, useNavigate } from "react-router-dom"
+import { ModalMusico } from "../../Components/ModalMusico/index.js"
+import { ModalFormsContrato } from "../../Components/CadastroContrato/index.js"
 
 export const Home = () =>{
     const navigate = useNavigate()
@@ -21,6 +23,9 @@ export const Home = () =>{
     const [musicos, setMusicos] = useState(null)
     const [pesquisa, setPesquisa] = useState(null)
     const [generoSelecionado, setGeneroSelecionado] = useState(null)
+    const [viewModalMusico, setViewModalMusico] = useState(null)
+    const [modalMusico, setModalMusico] = useState(null)
+    const [modalFormsContrato, setModalFormsContrato] = useState(false)
     const {state} = useLocation()
     const [user, setUser] = useState(state.user)
 
@@ -110,6 +115,12 @@ export const Home = () =>{
     return(
         <>
         <MenuLateral setMenu={setView} user={state.user} logout={logout} />
+        {viewModalMusico == true &&(
+            <ModalMusico item={modalMusico} setModalContrato={setModalFormsContrato} user={user} setModalMusico={setModalMusico} setViewModalMusico={setViewModalMusico} />
+        )}
+        {modalFormsContrato != false &&(
+            <ModalFormsContrato user={user} musico={modalMusico} setView={setModalFormsContrato} />
+        )}
         {view == 'Home' &&(
             <main className="page-home">
                         <div className="box-input">
@@ -138,7 +149,7 @@ export const Home = () =>{
                                 <h1 className="titulo-section-home">Músicos</h1>
                                 <div className="box-cards-home">
                                     {musicos.map(item =>
-                                    <Card artist={item} />
+                                    <Card artist={item} setViewModalMusico={setViewModalMusico} setModalMusico={setModalMusico} />
                                     )}
                                 </div> 
                             </section> 

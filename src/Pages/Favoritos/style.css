@@ -1,86 +1,174 @@
 @import '../../root.css';
 
-.page-favoritos{
-    margin-left: 20vw;
-    width: 80vw;
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 40px;
-    background-color: #222222;
+@media screen and (min-width:900px){
+    .page-favoritos{
+        margin-left: 20vw;
+        width: 80vw;
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        background-color: #222222;
+    }
+    .titulo-page-favoritos{
+        width: 100%;
+        padding-left: 10vw;
+        color: white;
+        font-family: 'Barlow', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: start;
+    }
+    .card-musico-favoritos{
+        width: 60vw;
+        margin-right: auto;
+        margin-left: 5vw;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3vh;
+        padding: 2vh;
+    }
+    .box-titulo-card-favoritos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .box-generos-button-card-favoritos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .box-generos-card-favoritos{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1vw;
+    }
+    .genero-card-favoritos{
+        background-color: #B5B0EC;
+        padding: 1vh;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Barlow', sans-serif; 
+    }
+    .button-card-favoritos{
+        font-family: 'Barlow', sans-serif; 
+        font-size: 1rem;
+        background: #804DEC;
+        cursor: pointer;
+        color: #fff;
+        padding: 1vh 1vw;
+        border-radius: 5px;
+    }
+    .nome-card-favoritos{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .descricao-card-favoritos{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #848484;
+    }
 }
-.titulo-page-favoritos{
-    width: 100%;
-    padding-left: 10vw;
-    color: white;
-    font-family: 'Barlow', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: start;
-}
-.card-musico-favoritos{
-    width: 60vw;
-    margin-right: auto;
-    margin-left: 5vw;
-    background-color: white;
-    border-radius: 10px;
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 3vh;
-    padding: 2vh;
-}
-.box-titulo-card-favoritos{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.box-generos-button-card-favoritos{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.box-generos-card-favoritos{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1vw;
-}
-.genero-card-favoritos{
-    background-color: #B5B0EC;
-    padding: 1vh;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Barlow', sans-serif; 
-}
-.button-card-favoritos{
-    font-family: 'Barlow', sans-serif; 
-    font-size: 1rem;
-    background: #804DEC;
-    cursor: pointer;
-    color: #fff;
-    padding: 1vh 1vw;
-    border-radius: 5px;
-}
-.nome-card-favoritos{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-.descricao-card-favoritos{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: #848484;
+
+@media screen and (max-width:600px){
+    .page-favoritos{
+        width: 100vw;
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 10vh;
+        background-color: #222222;
+    }
+    .titulo-page-favoritos{
+        width: 100%;
+        padding-left: 10vw;
+        color: white;
+        font-family: 'Barlow', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: start;
+    }
+    .card-musico-favoritos{
+        width: 60vw;
+        margin-right: auto;
+        margin-left: 5vw;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3vh;
+        padding: 2vh;
+    }
+    .box-titulo-card-favoritos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .box-generos-button-card-favoritos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .box-generos-card-favoritos{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1vw;
+    }
+    .genero-card-favoritos{
+        background-color: #B5B0EC;
+        padding: 1vh;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Barlow', sans-serif; 
+    }
+    .button-card-favoritos{
+        font-family: 'Barlow', sans-serif; 
+        font-size: 1rem;
+        background: #804DEC;
+        cursor: pointer;
+        color: #fff;
+        padding: 1vh 1vw;
+        border-radius: 5px;
+    }
+    .nome-card-favoritos{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .descricao-card-favoritos{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #848484;
+    }
 }

@@ -1,70 +1,147 @@
 @import '../../root.css';
 
-.page-contratos{
-    margin-left: 20vw;
-    width: 80vw;
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 40px;
-    background-color: #222222;
+@media screen and (min-width:900px) {
+        
+    .page-contratos{
+        margin-left: 20vw;
+        width: 80vw;
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        background-color: #222222;
+    }
+    .titulo-page-contratos{
+        width: 100%;
+        padding-left: 10vw;
+        color: white;
+        font-family: 'Barlow', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: start;
+    }
+    .section-box-contratos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        padding-top: 4vh;
+    }
+    .box-contrato-contratos{
+        border-radius: 5px;
+        background-color: white;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.5vh;
+        padding: 2vh;
+        font-family: 'Barlow', sans-serif;
+    }
+    .codigo-contrato-contratos{
+        color: #804DEC;
+    }
+    .legenda-nome-contratos{
+        color: gray;
+    }
+    .button-box-contrato-contratos{
+        font-family: 'Barlow', sans-serif;
+        color: white;
+        background-color: #804DEC;
+        padding: 1vh;
+        border-radius: 5px;
+        font-size: .8rem;
+        cursor: pointer;
+    }
+    .button-criar-contrato-contratos{
+        position: absolute;
+        left: 80vw;
+        font-family: 'Barlow', sans-serif;
+        color: white;
+        background-color: #804DEC;
+        padding: 2vh;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
 }
-.titulo-page-contratos{
-    width: 100%;
-    padding-left: 10vw;
-    color: white;
-    font-family: 'Barlow', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: start;
-}
-.section-box-contratos{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    padding-top: 4vh;
-}
-.box-contrato-contratos{
-    border-radius: 5px;
-    background-color: white;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1.5vh;
-    padding: 2vh;
-    font-family: 'Barlow', sans-serif;
-}
-.codigo-contrato-contratos{
-    color: #804DEC;
-}
-.legenda-nome-contratos{
-    color: gray;
-}
-.button-box-contrato-contratos{
-    font-family: 'Barlow', sans-serif;
-    color: white;
-    background-color: #804DEC;
-    padding: 1vh;
-    border-radius: 5px;
-    font-size: .8rem;
-}
-.button-criar-contrato-contratos{
-    position: absolute;
-    left: 80vw;
-    font-family: 'Barlow', sans-serif;
-    color: white;
-    background-color: #804DEC;
-    padding: 2vh;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
+
+@media screen and (max-width:600px) {
+    .page-contratos{
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 10vh;
+        background-color: #222222;
+    }
+    .titulo-page-contratos{
+        width: 100%;
+        padding-left: 10vw;
+        color: white;
+        font-family: 'Barlow', sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: start;
+    }
+    .section-box-contratos{
+        width: 90%;
+        margin-right: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        padding-top: 4vh;
+    }
+    .box-contrato-contratos{
+        border-radius: 5px;
+        background-color: white;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.5vh;
+        padding: 2vh;
+        font-family: 'Barlow', sans-serif;
+    }
+    .codigo-contrato-contratos{
+        color: #804DEC;
+    }
+    .legenda-nome-contratos{
+        color: gray;
+    }
+    .button-box-contrato-contratos{
+        font-family: 'Barlow', sans-serif;
+        color: white;
+        background-color: #804DEC;
+        padding: 1vh;
+        border-radius: 5px;
+        font-size: .8rem;
+        cursor: pointer;
+    }
+    .button-criar-contrato-contratos{
+        position: fixed;
+        left: 10vw;
+        top: 80vh;
+        width: 70vw;
+        font-family: 'Barlow', sans-serif;
+        color: white;
+        background-color: #804DEC;
+        padding: 2vh;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
 }

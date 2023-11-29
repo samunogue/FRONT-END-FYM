@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
 import './style.css'
-import { useLocation, useNavigate, useParams } from "react-router-dom"
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom"
 import { Post } from "../../Config/requisitions"
 import { endpoints } from "../../Config/config"
 const logo = require('../../Assets/LOGO_FYM_FUNDO_ESCURO.png')
@@ -37,7 +37,7 @@ export const LoginPage = () =>{
     
     return(
         <main className="page-login">
-            <img src={logo} height='300' />
+            <img src={logo} className="logo-fym-login" />
             <div className="box-login">
                 <input type={'text'} className="input" placeholder="Email" onChange={(event) => setEmail(event.target.value)}/>
                 <input type={'password'} className="input" placeholder="Senha"  onChange={(event) => setSenha(event.target.value)}/>
@@ -55,7 +55,7 @@ export const LoginPage = () =>{
                 <div className="linha-box-login"></div>
                 <p className="texto-login">Faça login com</p>
                 <img src={iconeGoogle} height='30'  />
-                <a className="link">Ainda não possui conta? Faça seu cadastro</a>
+                <Link to={'/cadastro'} className="link">Ainda não possui conta? Faça seu cadastro</Link>
             </div>
         </main>
     )

@@ -16,13 +16,13 @@ export const ConfiguracoesSection = () =>{
     const renderMenu = (params) =>{
         switch (params) {
             case 'Perfil':
-                return <PerfilSectionConfig />
+                return <PerfilSectionConfig user={user} />
             case 'Seguranca':
-                return <SegurancaSectionConfig />
+                return <SegurancaSectionConfig user={user} />
             case 'Pagamentos':
-                return <PagamentosSectionConfig />
+                return <PagamentosSectionConfig user={user} />
             case 'Notificacoes':
-                return <NotificacoesSectionConfig />
+                return <NotificacoesSectionConfig user={user} />
             default:
                 break;
         }
@@ -34,23 +34,23 @@ export const ConfiguracoesSection = () =>{
         <>
         <MenuLateral user={user} />
         <main className="page-configuracoes">
-            <div className='box-menu-configuracoes'>
+            <div className='box-menu-lateral-configuracoes'>
                 <h1 className='titulo-section-configuracoes'>Configurações</h1>
                 <button className='button-menu-configuracoes' onClick={() => definirMenu('Perfil')}>
                     <FontAwesomeIcon icon={faUser} color="#804DEC" />
-                    Perfil
+                    <p className='texto-button-menu-lateral-config'>Perfil</p>
                 </button>
                 <button className='button-menu-configuracoes' onClick={() => definirMenu('Pagamentos')}>
                     <FontAwesomeIcon icon={faCreditCard} color="#804DEC" />
-                    Pagamentos
+                    <p className='texto-button-menu-lateral-config'>Pagamentos</p>
                 </button>
                 <button className='button-menu-configuracoes' onClick={() => definirMenu('Seguranca')}>
                     <FontAwesomeIcon icon={faKey} color="#804DEC" />
-                    Segurança
+                    <p className='texto-button-menu-lateral-config'>Segurança</p>
                 </button>
                 <button className='button-menu-configuracoes' onClick={() => definirMenu('Notificacoes')}>
                     <FontAwesomeIcon icon={faBell} color="#804DEC" />
-                    Notificações
+                    <p className='texto-button-menu-lateral-config'>Notificações</p>
                 </button>
             </div>
             {renderMenu(view)}

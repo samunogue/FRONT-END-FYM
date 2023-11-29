@@ -5,10 +5,12 @@ import './style.css';
 import { endpoints } from '../../Config/config';
 import { Get } from '../../Config/requisitions';
 import { ModalFormsContrato } from '../../Components/CadastroContrato';
+import { ModalContrato } from '../../Components/ModalContrato';
 export const ContratosSection = () =>{
     const [load, setLoad] = useState(false)
     const [alerta, setAlerta] = useState(null)
     const [viewModal, setViewModal] = useState(false)
+    const [modalContrato, setModalContrato] = useState(null)
     const {state} = useLocation()
     const [user, setUser] = useState(state.user)
     const [tipo,setTipo] = useState(null)
@@ -34,7 +36,6 @@ export const ContratosSection = () =>{
         }
         var url = tipo == 'musico' ? endpoints.listarMusicos : endpoints.buscarContratante
         const userJson = await Get(url, params)
-        console.log(userJson)
         if(userJson == undefined || userJson == false){
             setLoad(false)
             setAlerta("Usuário não encontrado");
@@ -46,7 +47,10 @@ export const ContratosSection = () =>{
     return(
         <>
         {viewModal == true &&(
-            <ModalFormsContrato setView={setViewModal} user={user} />
+            <ModalFormsContrato setView={setViewModal} user={user}  />
+        )}
+        {modalContrato != null &&(
+            <ModalContrato tipo={tipo} item={modalContrato} user={user} setView={setModalContrato} buscarContratos={buscarUser}  />
         )}
         <MenuLateral user={user} />
         <main className="page-contratos">
@@ -65,7 +69,7 @@ export const ContratosSection = () =>{
                         <p className='legenda-nome-contratos'>Contratante</p>
                         <p className='nome-box-contrato-contratos'>{item.contratante.nome}</p>
                     </div>
-                    <button className='button-box-contrato-contratos'>
+                    <button className='button-box-contrato-contratos' onClick={() => setModalContrato(item)}>
                         Ver Contrato
                     </button>
                 </div>    

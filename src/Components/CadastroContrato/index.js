@@ -3,14 +3,14 @@ import './style.css';
 import { Get, Post } from '../../Config/requisitions';
 import { endpoints } from '../../Config/config';
 import { verificarForms } from '../../Utils/functions';
-export const ModalFormsContrato = ({setView, user}) =>{
+export const ModalFormsContrato = ({setView, user, musico}) =>{
     const [musicos, setMusicos] = useState(null)
     const [loadMusico, setLoadMusico] = useState(false)
     const [load ,setLoad] = useState(false)
     const [alerta, setAlerta] = useState(null)
     const [forms, setForms] = useState({
         contratante: user,
-        musico: '',
+        musico: musico == undefined ? '' : musico,
         dataEvento:'',
         termo:'',
         valor:''

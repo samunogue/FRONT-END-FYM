@@ -1,30 +1,65 @@
 @import '../../root.css';
 
-.section-menu-login{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #222222;
-    gap: 10vw;
+@media screen and (min-width:900px) {
+        
+    .section-menu-login{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #222222;
+        gap: 10vw;
+    }
+    .icone-box-menu{
+        height: 30vh;
+    }
+    .box-menu-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        gap: 5vh;
+        padding: 5vh 5vh 5vh 5vh;
+        cursor: pointer;
+    }
+    .titulo-box-menu-login{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+    }
 }
-.icone-box-menu{
-    height: 30vh;
-}
-.box-menu-login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 10px;
-    gap: 5vh;
-    padding: 5vh 5vh 5vh 5vh;
-    cursor: pointer;
-}
-.titulo-box-menu-login{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
+
+@media screen and (max-width:600px) {
+    .section-menu-login{
+        width: 100vw;
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #222222;
+        gap: 10vw;
+    }
+    .icone-box-menu{
+        height: 15vh;
+    }
+    .box-menu-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        gap: 5vh;
+        padding: 5vh 5vh 5vh 5vh;
+        cursor: pointer;
+    }
+    .titulo-box-menu-login{
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+    }
 }

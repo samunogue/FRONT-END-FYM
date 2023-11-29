@@ -1,50 +1,144 @@
 @import '../../root.css';
 
-.box-menu-lateral{
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #804DEC;
-    width: 20vw;
-    height: 100vh;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media screen and (min-width:900px) {
+    .box-menu-lateral{
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #804DEC;
+        width: 20vw;
+        height: 100vh;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-acesso-menu-lateral{
+        display: none;
+    }
+    .button-menu-lateral{
+        width: 80%;
+        height: 10vh;
+        font-size: 16px;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .section-generos-menu-lateral{
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+    }
+    .box-genero-menu-lateral{
+        background-color: aliceblue;
+        border-radius: 5px;
+        padding: 1vh;
+        font-size: 0.8rem;
+        font-family: 'Barlow', sans-serif; 
+    }
+    .nome-menu-lateral{
+        font-size: 1.3rem;
+        color: white;
+        font-weight: bold;
+        font-family: 'Barlow', sans-serif; 
+    }
 }
-.button-menu-lateral{
-    width: 80%;
-    height: 10vh;
-    font-size: 16px;
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.section-generos-menu-lateral{
-    display: flex;
-    width: 90%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-}
-.box-genero-menu-lateral{
-    background-color: aliceblue;
-    border-radius: 5px;
-    padding: 1vh;
-    font-size: 0.8rem;
-    font-family: 'Barlow', sans-serif; 
-}
-.nome-menu-lateral{
-    font-size: 1.3rem;
-    color: white;
-    font-weight: bold;
-    font-family: 'Barlow', sans-serif; 
+
+@media screen and (max-width:600px) {
+    .box-menu-lateral{
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #804DEC;
+        width: 70vw;
+        height: 100vh;
+        gap: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20%;
+    }
+    .visible{
+        display: flex;
+    }
+    .button-acesso-menu-lateral{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #804DEC;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        padding: 2vh;
+        border-radius: 3px;
+    }
+    .button-acesso-menu-lateral-fechar{
+        position: absolute;
+        top: 80vh;
+        left: 5vw;
+        width: 60vw;
+        height: 6vh;
+        background-color: white;
+        color: #804DEC;
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        font-size: 16px;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bold;
+        padding: 2vh;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .button-menu-lateral{
+        background-color: white;
+        width: 60vw;
+        height: 6vh;
+        font-size: 16px;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .section-generos-menu-lateral{
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+    }
+    .box-genero-menu-lateral{
+        background-color: aliceblue;
+        border-radius: 5px;
+        padding: 1vh;
+        font-size: 0.8rem;
+        font-family: 'Barlow', sans-serif; 
+    }
+    .nome-menu-lateral{
+        font-size: 1.3rem;
+        color: white;
+        font-weight: bold;
+        font-family: 'Barlow', sans-serif; 
+    }
 }
