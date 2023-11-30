@@ -16,5 +16,13 @@ export const endpoints = {
     cadastrarContrato:`${URL_BASE}/contratante/cadastrarContrato`,
     responderContrato:`${URL_BASE}/musico/responderContrato`,
     avaliarMusico:`${URL_BASE}/conta/avaliarMusico`,
-    buscarConversas:`${URL_BASE}/conta/buscarConversa`
+    buscarConversas:`${URL_BASE}/conta/buscarConversa`,
+    enviarMensagem:`${URL_BASE}/conta/enviarMensagem`,
+    favoritarMusicoMusico:`${URL_BASE}/musico/favoritarMusico`,
+    desfavoritarMusicoMusico:`${URL_BASE}/musico/desfavoritarMusico`,
+    favoritarMusicoContratante:`${URL_BASE}/contratante/favoritarMusico`,
+    desfavoritarMusicoContratante:`${URL_BASE}/contratante/desfavoritarMusico`,
+    criarConversa:`${URL_BASE}/conta/criarConversa`,
+    adicionarGeneroMusico:`${URL_BASE}/musico/genero`,
+    adicionarGeneroContratante:`${URL_BASE}/contratante/genero`
 }

@@ -53,14 +53,6 @@ export const LandingPage = () =>{
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis orci vel ornare sodales.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis orci vel ornare sodales.</p>
                 </div>
             </section>
-            <section className="section-home">
-                <img />
-                <div>
-                    <h2>Faça parte da nossa história</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis orci vel ornare sodales.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis orci vel ornare sodales.</p>
-                    <button>Cadastrar</button>
-                </div>
-            </section>
         </main>
     )
 }

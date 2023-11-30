@@ -101,6 +101,15 @@
     font-size: .7rem;
     color: gray;
 }
+.button-favoritar-modal-musico{
+    background-color: #E9B824;
+    padding: 1vh 2vw 1vh;
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    cursor: pointer;
+}
 }
 @media screen and (max-width:600px) {
     
@@ -118,7 +127,7 @@
         z-index: 1000;
     }
     .box-modal-musico{
-        width: 60vw;
+        width: 80vw;
         padding: 4vh;
         display: flex;
         flex-direction: column;

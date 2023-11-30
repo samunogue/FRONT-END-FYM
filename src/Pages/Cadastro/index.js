@@ -9,6 +9,7 @@ export const CadastroPage = () =>{
     const [load, setLoad] = useState(false)
     const [tipo, setTipo] = useState(null)
     const [repetirSenha, setRepetirSenha] = useState(null)
+    const [descricao, setDescricao] = useState(null)
     const [forms,setForms] = useState({
         nomeCompleto: null,
         CPF: null,
@@ -33,6 +34,7 @@ export const CadastroPage = () =>{
             setLoad(true)
             var url = tipo == "musico" ? endpoints.cadastrarMusico : endpoints.cadastrarContratante
             console.log("teste")
+            if(tipo == 'musico') forms.descricao = descricao
             const cadastrar = await Post(url , forms)
             console.log(cadastrar)
             if(cadastrar.error == false){
@@ -74,6 +76,9 @@ export const CadastroPage = () =>{
                     <input type={'text'} value={forms.endereco.estado} className="input-cadastro" placeholder="Estado" onChange={(event) => setForms({...forms,endereco:{...forms.endereco,estado: event.target.value}})}/>
                     <input type={'text'} value={forms.endereco.cidade} className="input-cadastro" placeholder="Cidade" onChange={(event) => setForms({...forms,endereco:{...forms.endereco,cidade: event.target.value}})}/>
                 </div>
+                {tipo == 'musico' &&(
+                    <textarea className='textarea-cadastro' onChange={(event) => setDescricao(event.target.value)} placeholder='Descrição'  />
+                )}
                 <button className="botao-login" onClick={cadastrar}>Cadastrar</button>
             </div>
         </main>

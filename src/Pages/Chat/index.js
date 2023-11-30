@@ -33,9 +33,9 @@ export const ChatSection = () =>{
           for (const element of conversas) {
             let outroUsuarioId;
       
-            if (element.usuarios[0] === user._id) {
+            if (element.usuarios[0] == user._id) {
               outroUsuarioId = element.usuarios[1];
-            } else if (element.usuarios[1] === user._id) {
+            } else if (element.usuarios[1] == user._id) {
               outroUsuarioId = element.usuarios[0];
             }
       
@@ -51,6 +51,10 @@ export const ChatSection = () =>{
           console.log(arrayUser.length);
           setDestinatarios(arrayUser);
           setConversas(conversas);
+          return({
+            destinatarios:arrayUser,
+            conversas:conversas
+          })
         } catch (error) {
           console.error("Erro ao buscar conversas:", error);
         }
@@ -59,7 +63,7 @@ export const ChatSection = () =>{
         <>
         <MenuLateral user={user} />
         {viewModalConversa == true &&(
-            <ModalConversa setIndex={setIndexConversa} setView={setModalConversa} user={user} destinatario={destinatarios[indexConversa]} conversa={conversas[indexConversa]} />
+            <ModalConversa index={indexConversa} setConversas={setConversas} setDestinatarios={setDestinatarios} buscarConversas={buscarConversas} setIndex={setIndexConversa} setView={setModalConversa} user={user} destinatario={destinatarios[indexConversa]} conversa={conversas[indexConversa]} />
         )}
         <main className="page-chat">
                 <h1 className="titulo-page-chat">Minhas Conversas</h1>
@@ -68,7 +72,9 @@ export const ChatSection = () =>{
                         conversas.map((item, index) => (
                         <div key={index} className="div-conversa" onClick={() =>{setIndexConversa(index);setModalConversa(true)}}>
                               <p className='nome-destinatario-conversa'>{destinatarios[index].nomeCompleto}</p>
-                              <p className='mensagem-conversa'>{item.mensagens[item.mensagens.length-1].texto}</p>
+                              {item.mensagens.length > 0  &&(
+                                <p className='mensagem-conversa'>{item.mensagens[item.mensagens.length-1].texto}</p>
+                              )}
                         </div>
                         ))
                     )}

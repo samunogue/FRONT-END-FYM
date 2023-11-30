@@ -56,6 +56,23 @@ export async function Post(url, body) {
     };
   }
 }
+export async function Put(url, body) {
+  try {
+    const response = await axios.put(url, body, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    console.log(response)
+    return response.data;
+  } catch (error) {
+    console.log(error)
+    return {
+      codigo: error.response ? error.response.status : null,
+      mensagem: error.response ? error.response.data.message : 'Erro na requisição',
+    };
+  }
+}
 
 export function formatarParams(params){
     if(params != null){

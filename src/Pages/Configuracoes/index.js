@@ -14,7 +14,7 @@ export const ConfiguracoesSection = () =>{
     const renderMenu = (params) =>{
         switch (params) {
             case 'Perfil':
-                return <PerfilSectionConfig user={user} />
+                return <PerfilSectionConfig userJson={user} />
             case 'Pagamentos':
                 return <PagamentosSectionConfig user={user} />
             default:
@@ -33,10 +33,6 @@ export const ConfiguracoesSection = () =>{
                 <button className='button-menu-configuracoes' onClick={() => definirMenu('Perfil')}>
                     <FontAwesomeIcon icon={faUser} color="#804DEC" />
                     <p className='texto-button-menu-lateral-config'>Perfil</p>
-                </button>
-                <button className='button-menu-configuracoes' onClick={() => definirMenu('Pagamentos')}>
-                    <FontAwesomeIcon icon={faCreditCard} color="#804DEC" />
-                    <p className='texto-button-menu-lateral-config'>Pagamentos</p>
                 </button>
             </div>
             {renderMenu(view)}

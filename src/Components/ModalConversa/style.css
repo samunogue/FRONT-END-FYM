@@ -16,6 +16,7 @@
         z-index: 1000;
     }
     .box-modal-conversa{
+        height: 70vh;
         width: 60vw;
         padding: 4vh;
         display: flex;
@@ -29,8 +30,10 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        min-height: 50vh;
+        min-height: 40vh;
         overflow-y: scroll;
+        padding: 3vh 0vw 3vh 0vw;
+        gap: 1vh;
     }
     .mensagem-destinatario{
         background-color: rgb(202, 202, 202);

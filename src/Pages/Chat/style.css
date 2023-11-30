@@ -37,6 +37,7 @@
         align-items: center;
         justify-content: center;
         padding-top: 5vh;
+        gap: 3vh;
     }
     .nome-destinatario-conversa{
         color: #804DEC;

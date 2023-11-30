@@ -17,6 +17,7 @@ export const LoginPage = () =>{
     useEffect(()=>{
         loginGoogle()
     },[])
+    
     const login = async () =>{
         setLoad(true)
         const url = state.tipo == 'contratante' ? endpoints.loginContratante : endpoints.loginMusico
