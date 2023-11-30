@@ -41,16 +41,16 @@ export const ModalContrato = ({item, tipo, setView, buscarContratos, user}) =>{
         },2000)
         buscarContratos(user)
     }
-    const avaliarMusico = async (musico) =>{
+    const avaliarMusico = async (item) =>{
         setLoad(true)
-        const url = endpoints.responderContrato
+        const url = endpoints.avaliarMusico
         const body = {
             "avaliacao":{
                 "nome": user.nomeCompleto,
-                "mensagem":"Excelente apresentação",
-                "nota":"4.7"
+                "mensagem":formsAvaliacao.mensagem,
+                "nota": formsAvaliacao.nota
             },
-            "idMusico": item.id
+            "idMusico": item.musico.id
         }
         const responder = await Post(url, body)
         if(responder.error == false){
@@ -106,8 +106,8 @@ export const ModalContrato = ({item, tipo, setView, buscarContratos, user}) =>{
                     {viewAvaliacao == true &&(
                     <div className='box-avaliacao-contrato'>
                         <h1 className='titulo-avaliacao-contrato'>Avaliação</h1>
-                        <textarea placeholder='Comentário' className='textarea-avaliacao-contrato' />
-                        <input placeholder='Nota (0 - 5)' className='input-nota-avaliacao-contrato' />
+                        <textarea placeholder='Comentário' className='textarea-avaliacao-contrato' onChange={(event) => setFormsAvaliacao({...formsAvaliacao,mensagem:event.target.value})} />
+                        <input placeholder='Nota (0 - 5)' className='input-nota-avaliacao-contrato' onChange={(event) => setFormsAvaliacao({...formsAvaliacao,nota:event.target.value})} />
                         <button className='botao-avaliar-contrato' onClick={()=> avaliarMusico(item)}>Enviar</button>
                         <button className='botao-fechar-avaliacao-contrato' onClick={()=> setViewAvaliacao(false)}>Fechar</button>
                     </div>

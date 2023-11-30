@@ -102,3 +102,9 @@
     padding: 1vh;
     cursor: pointer;
 }
+.box-generos-config-perfil{
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    flex-wrap: wrap;
+}

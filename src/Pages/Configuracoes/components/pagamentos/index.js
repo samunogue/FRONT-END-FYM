@@ -1,7 +1,7 @@
 import { faCreditCard, faUser } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import './style.css';
-export const PagamentosSectionConfig = () =>{
+export const PagamentosSectionConfig = ({user}) =>{
     return(
         <section className="section-pagamentos">
             <div className="box-titulo-section-pagamentos">

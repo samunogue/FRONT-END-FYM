@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './style.css'
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom"
 import { Post } from "../../Config/requisitions"
@@ -14,7 +14,9 @@ export const LoginPage = () =>{
     const [alerta, setAlerta] = useState(null)
     const {state} = useLocation()
     const navigate = useNavigate()
-
+    useEffect(()=>{
+        loginGoogle()
+    },[])
     const login = async () =>{
         setLoad(true)
         const url = state.tipo == 'contratante' ? endpoints.loginContratante : endpoints.loginMusico
@@ -34,7 +36,26 @@ export const LoginPage = () =>{
             setAlerta(null)
         },2000)
     }
-    
+
+    function loginGoogle(){
+        window.google.accounts.id.initialize({
+          client_id: '566014604548-5vkvouvobbqqc5r49ns81eu6qna8na9d.apps.googleusercontent.com',
+          callback: (e) => console.log(e)
+        });
+      
+        window.google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"), {
+          theme: "filled_black",
+          size: "large",
+          type: "standard",
+          shape: "pill",
+          locale: "pt-BR",
+          logo_alignment: "left",
+        } 
+        );
+      
+        window.google.accounts.id.prompt()
+    }
     return(
         <main className="page-login">
             <img src={logo} className="logo-fym-login" />
@@ -54,7 +75,9 @@ export const LoginPage = () =>{
                 )}
                 <div className="linha-box-login"></div>
                 <p className="texto-login">Faça login com</p>
-                <img src={iconeGoogle} height='30'  />
+                <div id="buttonDiv">
+
+                </div>
                 <Link to={'/cadastro'} className="link">Ainda não possui conta? Faça seu cadastro</Link>
             </div>
         </main>

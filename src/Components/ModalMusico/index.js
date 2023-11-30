@@ -53,7 +53,7 @@ export const ModalMusico = ({item, setModalMusico, user,setModalContrato, setVie
                         item.avaliacoes.map(avaliacao =>
                             <div className='genero-modal-musico'>
                                 <p className='avaliacao-mensagem-modal-musico'>{avaliacao.mensagem}</p>
-                                <p className='avaliacao-nome-modal-musico'>{avaliacao.nome}</p>  
+                                <p className='avaliacao-nome-modal-musico'>- {avaliacao.nome}</p>  
                             </div>  
                         )
                     )}

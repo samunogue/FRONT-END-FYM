@@ -15,5 +15,6 @@ export const endpoints = {
     redefinirSenhaContratante:`${URL_BASE}/conta/redefinirSenhaContratante`,
     cadastrarContrato:`${URL_BASE}/contratante/cadastrarContrato`,
     responderContrato:`${URL_BASE}/musico/responderContrato`,
-    avaliarMusico:`${URL_BASE}/conta/avaliarMusico`
+    avaliarMusico:`${URL_BASE}/conta/avaliarMusico`,
+    buscarConversas:`${URL_BASE}/conta/buscarConversa`
 }

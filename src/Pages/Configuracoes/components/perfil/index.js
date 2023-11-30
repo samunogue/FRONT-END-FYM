@@ -4,6 +4,7 @@ import './style.css';
 import { useState } from "react";
 export const PerfilSectionConfig = ({user}) =>{
     const [edit,setEdit] = useState(false)
+    
     return(
         <section className="section-perfil">
             <div className="box-titulo-section-perfil">
@@ -18,7 +19,7 @@ export const PerfilSectionConfig = ({user}) =>{
                 <h2 className="label-input-config-perfil">CPF</h2>
                 <input className="input-config-perfil" readOnly={true} placeholder={user.CPF}></input>
                 <h2 className="label-input-config-perfil">Gêneros</h2>
-                <div>
+                <div className="box-generos-config-perfil">
                     {user.generos.map(item =>
                     <p className='genero-config-perfil'>{item}</p>
                     )}
